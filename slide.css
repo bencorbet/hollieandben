@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.cycle-slideshow, .cycle-slideshow * { 
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box; }
+
+
+.cycle-slideshow { 
+	width:100vw; 
+	height:94.999vh; 
+	overflow:hidden;
+    background: url(http://malsup.github.com/images/spinner.gif) 50% 50% no-repeat;
+
+ }
+
+.cycle-slideshow img { 
+    position:relative; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	max-width:100%; 
+	height:100%; 
+	max-height:100%;
+    padding: 0; 
+	display: block;
+}
+
+.cycle-slideshow img:first-child {
+    position: static; 
+	z-index: 100;
+}
+
+/* pager */
+.cycle-pager { 
+    text-align: center; 
+	width: 100%; 
+	z-index: 500; 
+	position: absolute; 
+	bottom: 10px; 
+	overflow: hidden;
+}
+
+.cycle-pager span {
+    font-family: arial;
+    font-size: 44px;
+    width: 11px;
+    height: 11px;
+    line-height: 12px;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.cycle-pager span.cycle-pager-active {
+    color: #fdc3c2;
+}
+
+.cycle-pager > * { cursor: pointer;}

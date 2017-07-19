@@ -1,0 +1,157 @@
+nav { display: block; }
+ol, ul { list-style: none; }
+
+
+/* navigation bottom */
+
+#navigation {  
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background: rgba(255,255,255,0.75);
+  z-index: 9999;
+  font-size: 62.5%;
+}
+
+#bottomnav {  
+  max-width: 1000px;
+  min-width: 380px;
+  margin: 0 auto;
+  font-family: 'Caecilla', sans-serif;
+  font-weight:700;
+  clear: both;
+}
+
+#bottomnav li { }
+
+#bottomnav li a { 
+  display: block;
+  float: left;
+  color: #a28712;
+  /*padding: 0px 15px;*/
+  padding: 0px 32px;
+  margin-right: 1px;
+  font-size: 1.6em;
+  line-height: 45px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#bottomnav li a:hover { 
+  color: #e8dfb7;
+}
+
+#bottomnav li.current a { 
+  color: #fabde1;
+}
+
+
+/* navigation left */
+
+#menu {
+
+  display: block;
+  position: fixed;
+  list-style-type: none;
+  width: 30vw;
+  z-index: 9999;
+}
+
+#leftnav {  
+  margin: 0 auto;
+  clear: both;
+}
+
+#leftnav li { }
+
+#leftnav li a { 
+  display: block;
+  float: left;
+  color: #a28712;
+  padding: 2vh 15px;
+  margin-right: 1px;
+  font-family: 'Raleway', sans-serif;
+  font-weight:700;
+  font-size: 5vw;
+  font-weight: bold;
+  text-decoration: none;
+ 
+}
+#leftnav li a:hover { 
+  color: #e8dfb7;
+}
+
+#leftnav li.current a { 
+  color: #fabde1;
+}
+
+
+/* hamburger */
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+	margin: 5vh 5vw;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #a28712;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+
+
+div.panel {
+    padding: 0 18px;
+    background: rgba(255,255,255,0.75);
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+	
+}
+
+div.panel.show {
+    max-height: 85vh;
+	overflow:scroll;
+	min-width:100px;
+}
+
+.accordion {
+    background-color: transparent;
+}
+
+
+/* */
+
+@media (min-width:760px) {
+  #menu {
+     display: none;
+  }
+  #navigation {
+    display: block;
+  }
+}
+
+
